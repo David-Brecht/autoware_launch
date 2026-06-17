@@ -158,6 +158,10 @@
   <arg name="traffic_light_recognition/classification/lamp_recognizer_ml_param_path"/>
   <arg name="traffic_light_recognition/classification/pedestrian/classifier_type"/>
   <arg name="traffic_light_recognition/classification/car/classifier_type"/>
+  
+  <!-- multiplexers for remote operation -->
+  <arg name="traffic_signals_multiplexer_param_path"/>
+  <arg name="predicted_objects_multiplexer_param_path"/>
 
   <!-- Whether to use detection by tracker -->
   <arg name="use_detection_by_tracker" default="true"/>
@@ -373,6 +377,7 @@
         <push-ros-namespace namespace="prediction"/>
         <include file="$(find-pkg-share tier4_perception_launch)/launch/object_recognition/prediction/prediction.launch.xml">
           <arg name="use_vector_map" value="$(var use_vector_map)"/>
+          <arg name="predicted_objects_multiplexer_param_path" value="$(var predicted_objects_multiplexer_param_path)"/>
         </include>
       </group>
     </group>
@@ -415,6 +420,7 @@
         <arg name="classification/lamp_recognizer_ml_param_path" value="$(var traffic_light_recognition/classification/lamp_recognizer_ml_param_path)"/>
         <arg name="classification/pedestrian/classifier_type" value="$(var traffic_light_recognition/classification/pedestrian/classifier_type)"/>
         <arg name="classification/car/classifier_type" value="$(var traffic_light_recognition/classification/car/classifier_type)"/>
+        <arg name="traffic_signals_multiplexer_param_path" value="$(var traffic_signals_multiplexer_param_path)"/>
       </include>
     </group>
   </group>

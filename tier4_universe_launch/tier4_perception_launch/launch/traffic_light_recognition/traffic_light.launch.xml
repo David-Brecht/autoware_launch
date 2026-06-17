@@ -18,6 +18,7 @@
   <arg name="traffic_light_multi_camera_fusion_param_path"/>
   <arg name="traffic_light_arbiter_param_path"/>
   <arg name="crosswalk_traffic_light_estimator_param_path"/>
+  <arg name="traffic_signals_multiplexer_param_path"/>
 
   <!-- ML parameters -->
   <arg name="whole_image_detection/model_path"/>
