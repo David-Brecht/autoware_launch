@@ -124,7 +124,7 @@
   </group>
 
   <!-- multiplexer for remote operation -->
-  <include file="$(find-pkg-share tum_autoware_teleoperation_interfaces)/launch/traffic_signals_multiplexer.launch.xml">
+  <include file="$(find-pkg-share autoware_remote_interfaces)/launch/traffic_signals_multiplexer.launch.xml">
     <arg name="traffic_signals_multiplexer_param_path" value="$(var traffic_signals_multiplexer_param_path)"/>
   </include>
 

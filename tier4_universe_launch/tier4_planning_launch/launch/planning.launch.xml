@@ -94,7 +94,7 @@
 
     <!-- trajectory multiplexer -->
     <group>
-      <include file="$(find-pkg-share tum_autoware_teleoperation_interfaces)/launch/trajectory_multiplexer.launch.xml">
+      <include file="$(find-pkg-share autoware_remote_interfaces)/launch/trajectory_multiplexer.launch.xml">
         <arg name="trajectory_multiplexer_param_path" value="$(var trajectory_multiplexer_param_path)"/>
       </include>
     </group>

@@ -31,7 +31,7 @@
   </group>
 
   <!-- multiplexer for remote operation -->
-  <include file="$(find-pkg-share tum_autoware_teleoperation_interfaces)/launch/predicted_objects_multiplexer.launch.xml">
+  <include file="$(find-pkg-share autoware_remote_interfaces)/launch/predicted_objects_multiplexer.launch.xml">
     <arg name="predicted_objects_multiplexer_param_path" value="$(var predicted_objects_multiplexer_param_path)"/>
   </include>
 </launch>
