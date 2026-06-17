@@ -331,5 +331,9 @@
     <arg name="traffic_light_recognition/classification/pedestrian/label_path" value="$(var traffic_light_recognition/classification/pedestrian/label_path)"/>
     <arg name="traffic_light_recognition/classification/lamp_recognizer_ml_param_path" value="$(var traffic_light_recognition/classification/lamp_recognizer_ml_param_path)"/>
     <arg name="input_pointcloud_for_traffic_light_occlusion_predictor" value="$(var input_pointcloud_for_traffic_light_occlusion_predictor)"/>
+
+    <!-- Objects and traffic light multiplexer -->
+    <arg name="predicted_objects_multiplexer_param_path" value="$(find-pkg-share autoware_launch)/config/perception/object_recognition/prediction/predicted_objects_multiplexer/predicted_objects_multiplexer.param.yaml"/>
+    <arg name="traffic_signals_multiplexer_param_path" value="$(find-pkg-share autoware_launch)/config/perception/traffic_light_recognition/traffic_signals_multiplexer/traffic_signals_multiplexer.param.yaml"/>
   </include>
 </launch>

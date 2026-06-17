@@ -40,7 +40,7 @@
   <arg name="internal/traffic_signals" default="/perception/traffic_light_recognition/internal/traffic_signals" description="topic from traffic_light_multi_camera_fusion"/>
   <arg name="external/traffic_signals" default="/perception/traffic_light_recognition/external/traffic_signals" description="topic from V2X"/>
   <arg name="judged/traffic_signals" default="/perception/traffic_light_recognition/judged/traffic_signals" description="topic from traffic_light_arbiter"/>
-  <arg name="output/traffic_signals" default="/perception/traffic_light_recognition/traffic_signals" description="final output topic as traffic light recognition"/>
+  <arg name="output/traffic_signals" default="/perception/traffic_light_recognition/estimation/traffic_signals" description="final output topic as traffic light recognition"/>
 
   <!-- detection and classification pipeline on each camera -->
   <group unless="$(var fusion_only)">
@@ -121,6 +121,11 @@
       <arg name="param_path" value="$(var crosswalk_traffic_light_estimator_param_path)"/>
     </include>
   </group>
+
+  <!-- multiplexer for remote operation -->
+  <include file="$(find-pkg-share tum_autoware_teleoperation_interfaces)/launch/traffic_signals_multiplexer.launch.xml">
+    <arg name="traffic_signals_multiplexer_param_path" value="$(var traffic_signals_multiplexer_param_path)"/>
+  </include>
 
   <!-- traffic light status visualizer on rviz -->
   <group>
