@@ -15,6 +15,7 @@
   <arg name="enable_all_modules_auto_mode"/>
   <arg name="is_simulation"/>
   <arg name="launch_remaining_distance_time_calculator" default="false"/>
+  <arg name="path_multiplexer_param_path"/>
   <arg name="trajectory_multiplexer_param_path"/>
   <!-- Input topic parameters -->
   <arg name="input_objects_topic_name"/>
@@ -47,6 +48,7 @@
         <arg name="is_simulation" value="$(var is_simulation)"/>
         <arg name="input_objects_topic_name" value="$(var input_objects_topic_name)"/>
         <arg name="input_pointcloud_topic_name" value="$(var input_pointcloud_topic_name)"/>
+        <arg name="path_multiplexer_param_path" value="$(var path_multiplexer_param_path)"/>
       </include>
     </group>
 

@@ -129,8 +129,9 @@
     <arg name="planning_validator_intersection_collision_checker_param_path" value="$(var common_config_path)/planning_validator/intersection_collision_checker.param.yaml"/>
     <arg name="planning_validator_rear_collision_checker_param_path" value="$(var common_config_path)/planning_validator/rear_collision_checker.param.yaml"/>
 
-    <!-- trajectory multiplexer -->
-    <arg name="trajectory_multiplexer_param_path" value="$(var motion_config_path)/trajectory_multiplexer/trajectory_multiplexer.param.yaml"/>
+    <!-- path and trajectory multiplexer -->
+    <arg name="path_multiplexer_param_path" value="$(find-pkg-share autoware_launch)/config/planning/scenario_planning/common/path_multiplexer/path_multiplexer.param.yaml"/>
+    <arg name="trajectory_multiplexer_param_path" value="$(find-pkg-share autoware_launch)/config/planning/scenario_planning/common/trajectory_multiplexer/trajectory_multiplexer.param.yaml"/>
 
     <!-- trajectory generator params -->
     <arg name="diffusion_planner_param_path" value="$(var neural_net_planner_config_path)/diffusion_planner.param.yaml"/>
