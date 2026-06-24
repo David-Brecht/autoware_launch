@@ -10,3 +10,8 @@
       topic_type: "autoware_perception_msgs/msg/PredictedObjects"
       output_topic: "/perception/object_recognition/objects"
       select_input_service: "predicted_objects_multiplexer/select_input"
+  predicted_objects_modifier:
+    ros__parameters:
+      input_topic: "/perception/object_recognition/prediction/objects"
+      output_topic: "/external/remote/objects"
+      select_mod_service: "object_list_modifier/select_mod"
